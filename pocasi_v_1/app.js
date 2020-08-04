@@ -23,7 +23,7 @@
      obj = JSON.parse(text);
      
     if(localStorage.getItem("save") != null){
-    obj.forEach(myFunction);       
+           
     for (var l = 0; l < obj.length; l++) 
     {
       myObj[i] = obj[j];
@@ -44,7 +44,7 @@
               <span>${name}</span>
               <sup>${sys.country}</sup>
             </h2>
-            <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
+            <div class="city-temp">${parseFloat(main.temp-273.15).toFixed(1)}<sup>°C</sup></div>
             <figure>
               <img class="city-icon" src=${icon} alt=${weather[0]["main"]}>
     
@@ -140,21 +140,12 @@
          
           form.reset();
           city1.focus();
-                
-
-             
-                               
-             
+          
         
     }
       });
       
     
-   
-    
-
-    
-
 
 function displayWeather(){
     iconElement.src = `Icons/${weather.iconId}.png`;
@@ -167,6 +158,3 @@ button.onclick = function () {
   location.reload(true);
 }
  
-function myFunction(value) {
-  txt = txt + value + "<br>";    
-}
