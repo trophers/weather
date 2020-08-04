@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="./style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<title>Weather</title>
+</head>
+<body>
+    <form class="city-search">
+<input type="text" class="city_location" placeholder="Enter location"></input>
+<button type="submit">Hledat</button>
+    </form>
+    
+    <div class="location">
+        <h1 class="location-city">Timezone</h1>
+        <img id="weather-icon" img src="Icons/01d.png" >
+    </div>
+    <div class="temperature">
+        <div class="degree-section">
+        <h2 class="temperature-degree">Celsius</h2>
+        <span>C</span>
+    </div>
+        <div class="temperature-description"> Cold</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5">
+          <section class="history-section">
+            <form>
+            <h1 class="heading2">Historie</h1>
+            <button type="button" id="deleteBtn" >Smazat historii </button>
+            <br>
+            <p id="history" style="height: 5vh;"></p>
+           </section>
+      </form>
+            
+            <section class="vypis">
+              <div class="container">
+                <ul class="cities" ></ul>
+            
+              </div>
+            </section>
+        </div>
+    </div>
+    
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA8V9wr7UwUcefHYheIrHwf7EWgx4UmGQ&libraries=places"></script>
+    <script src="app.js" async defer>
+      
+    </script>
+</body>
+</html>
